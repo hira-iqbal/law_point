@@ -1,0 +1,17 @@
+// Place all the styles related to the Articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+html{
+  padding: 20px;
+}
+.p-ellipsis{
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
+.icon-height {
+  height: 24px;
+  margin-top:5px;
+}

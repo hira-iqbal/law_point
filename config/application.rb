@@ -5,6 +5,9 @@ require 'rails/all'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+
+require 'rails/all'
+Bundler.require(:default, Rails.env)
 module LawPoint
   class Application < Rails::Application
     
