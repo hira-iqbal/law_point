@@ -1,0 +1,17 @@
+<div class="d-flex justify-content-center">
+  <%= form_with model: @article do |form| %>
+    <div class= "form-group">
+      <h5><%= form.label :title %>:</h5>
+      <%= form.text_field :title , class:"form-control", size: 70 %>
+    </div>
+
+    <div class= "form-group mt-3">
+      <h5><%= form.label :body %>:</h5>
+      <%= form.text_area :body, class: "form-control", size: 70%>
+    </div><br>
+
+    <div class="d-flex flex-row-reverse" style="margin-top: -15px">
+      <%= form.submit class: "btn btn-success" %>
+    </div>
+  <% end %>
+</div>
