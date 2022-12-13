@@ -1,0 +1,15 @@
+<div class="d-flex justify-content-center">
+    <div class="col-md-4 col-md-offset-3">
+      <div class="page-header">
+        <h2>Forgot your password?</h2>
+      </div>
+      <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: {method: :post}, defaults: {input_html: {class: 'form-control bottom-10px'}}) do |f| %>
+        <div class="input-group mb-3">
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control input_user", placeholder: "email", size: 50 %>
+        </div>
+        <div class="form-actions clearfix bottom-10px">
+          <%= f.submit 'Send me reset password instructions', class: 'btn btn-lg btn-success pull-right', style:"width: 100%" %>
+        </div>
+      <% end %>
+    </div>
+</div>
