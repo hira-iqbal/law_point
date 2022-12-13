@@ -1,0 +1,45 @@
+<div class="container mt-5">
+  <div class="d-flex justify-content-center">
+    <div class="brand_logo_container">
+      <h2>Log in</h2>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-center form_container">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+      <div class="input-group mb-3">
+          <div class="input-group-append">
+            <span class="input-group-text"><i class="fa fa-envelope icon-height"></i></span>
+          </div>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control input_user", placeholder: "email", size: 50 %>
+      </div>
+
+      <div class="input-group mb-2">
+        <div class="input-group-append">
+          <span class="input-group-text"><i class="fas fa-key icon-height"></i></span>
+        </div>
+        <%= f.password_field :password, autocomplete: "current-password", class:"form-control input_user", placeholder: "password" %>
+      </div>
+
+      <div class="mb-3">
+        <%= f.submit "Log in", class: "btn btn-primary w-100 mt-2" %>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="form-group">
+          <div class="custom-control custom-checkbox mt-3">
+            <%= f.check_box :remember_me, class: "custom-control-input", id: "customControlInline" %>
+            <%= f.label :remember_me, class:"custom-control-label", for: "customControlInline" %>
+          </div>
+        </div>
+      <% end %>
+
+      <div style="margin-top: -25px">
+        <div>
+          <%= render "devise/shared/links" %>
+        <div>
+      </div>
+    <% end %>
+  </div>
+</div>

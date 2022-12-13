@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="page-header">
+      <h2>Change your password</h2>
+    </div>
+    <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: {method: :put}, defaults: {input_html: {class: 'form-control bottom-10px'}}) do |f| %>
+      <%= f.text_field :reset_password_token, :as => :hidden %>
+      <div class="form-inputs">
+        <%= f.password_field :password, required: true, label: false, autofocus: true, placeholder: 'New password' %>
+        <%= f.password_field :password_confirmation, required: true, label: false, autofocus: true, placeholder: 'Confirm your password' %>
+      </div>
+      <div class="form-actions clearfix bottom-10px">
+        <%= f.submit 'Change my password', class: 'btn btn-lg btn-success pull-right' %>
+      </div>
+    <% end %>
+  </div>
+</div>
