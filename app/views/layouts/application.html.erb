@@ -14,10 +14,11 @@
 
 </head>
 <body>
-  <%= render 'layouts/navigation' %>
-  <%= image_tag "law.png", class: "d-inline-block align-text-top background-image"%>
+  <div class="sub-container">
+    <%= render 'layouts/navigation' %>
+    <%= image_tag "law.png", class: "d-inline-block align-text-top background-image", style: "height: 40%" %>
 
-  <%= yield %>
-
+    <%= yield %>
+  </div>
 </body>
 </html>
