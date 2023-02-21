@@ -1,45 +1,47 @@
-<div class="container mt-5">
-  <div class="d-flex justify-content-center">
-    <div class="brand_logo_container">
-      <h2>Log in</h2>
+<body class="login-background">
+  <div class="container mt-5" style="background-color: rgba(0, 0, 0, 0.6); width: 36%; padding-bottom: 30px; border-radius: 10px">
+    <div class="d-flex justify-content-center">
+      <div class="brand_logo_container" style="margin-top: 20px">
+        <h2 style="color: white">Log in</h2>
+      </div>
     </div>
-  </div>
 
-  <div class="d-flex justify-content-center form_container">
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="d-flex justify-content-center form_container" style="padding: 20px">
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
-      <div class="input-group mb-3">
-          <div class="input-group-append">
-            <span class="input-group-text"><i class="fa fa-envelope icon-height"></i></span>
-          </div>
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control input_user", placeholder: "email", size: 50 %>
-      </div>
-
-      <div class="input-group mb-2">
-        <div class="input-group-append">
-          <span class="input-group-text"><i class="fas fa-key icon-height"></i></span>
+        <div class="input-group mb-3">
+            <div class="input-group-append">
+              <span class="input-group-text"><i class="fa fa-envelope icon-height"></i></span>
+            </div>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control input_user", placeholder: "email", size: 50 %>
         </div>
-        <%= f.password_field :password, autocomplete: "current-password", class:"form-control input_user", placeholder: "password" %>
-      </div>
 
-      <div class="mb-3">
-        <%= f.submit "Log in", class: "btn btn-primary w-100 mt-2" %>
-      </div>
-
-      <% if devise_mapping.rememberable? %>
-        <div class="form-group">
-          <div class="custom-control custom-checkbox mt-3">
-            <%= f.check_box :remember_me, class: "custom-control-input", id: "customControlInline" %>
-            <%= f.label :remember_me, class:"custom-control-label", for: "customControlInline" %>
+        <div class="input-group mb-2">
+          <div class="input-group-append">
+            <span class="input-group-text"><i class="fas fa-key icon-height"></i></span>
           </div>
+          <%= f.password_field :password, autocomplete: "current-password", class:"form-control input_user", placeholder: "password" %>
+        </div>
+
+        <% if devise_mapping.rememberable? %>
+          <div class="form-group">
+            <div class="custom-control custom-checkbox mt-3">
+              <%= f.check_box :remember_me, class: "custom-control-input", id: "customControlInline" %>
+              <%= f.label :remember_me, class:"custom-control-label", for: "customControlInline", style: "color: white" %>
+            </div>
+          </div>
+        <% end %>
+
+        <div class="mb-3">
+          <%= f.submit "Log in", class: "btn btn-primary w-100 mt-2" %>
+        </div>
+
+        <div>
+          <div class="mr-5">
+            <%= render "devise/shared/links" %>
+          <div>
         </div>
       <% end %>
-
-      <div style="margin-top: -25px">
-        <div>
-          <%= render "devise/shared/links" %>
-        <div>
-      </div>
-    <% end %>
+    </div>
   </div>
-</div>
+</body>

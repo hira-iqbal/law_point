@@ -3,15 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .sub-container {
   margin-top: -5px;
-  padding-left: 10px;
-  padding-right:10px;
-}
-
-.p-ellipsis{
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;  
-  overflow: hidden;
 }
 
 .icon-height {
@@ -19,8 +10,13 @@
   margin-top:5px;
 }
 
-.background-image{
+.background-image {
   margin-top: -5px;
   width: 100%;
-  height: 400px;
+}
+
+.login-background {
+  background-image: image_url('law.png');
+  background-size: cover;
+  background-repeat: no-repeat;
 }

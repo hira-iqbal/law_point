@@ -16,8 +16,9 @@
 <body>
   <div class="sub-container">
     <%= render 'layouts/navigation' %>
-    <%= image_tag "law.png", class: "d-inline-block align-text-top background-image", style: "height: 40%" %>
-
+      <% if !current_page?('/users/sign_in') %>
+        <%= image_tag "law.png", class: "d-inline-block align-text-top background-image" %>
+      <% end %>
     <%= yield %>
   </div>
 </body>
