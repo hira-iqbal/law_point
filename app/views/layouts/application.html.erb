@@ -16,8 +16,13 @@
 <body>
   <div class="sub-container">
     <%= render 'layouts/navigation' %>
-      <% if !current_page?('/users/sign_in') %>
+      <% if !current_page?('/admin') && !current_page?('/sign_up') %>
+      <div class="landing-page">
         <%= image_tag "law.png", class: "d-inline-block align-text-top background-image" %>
+        <div class="landing-page-overlay">
+          <h1 class="animated-text">Protect your interests and secure your future with our legal advice and services."</h1>
+        </div>
+      </div>
       <% end %>
     <%= yield %>
   </div>

@@ -20,3 +20,45 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+.input-group:focus-within .form-control {
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.landing-page-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: bottom;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.landing-page {
+  position: relative;
+}
+
+.animated-text {
+  position: relative;
+  right: -100%; /* Start the element outside the screen */
+  animation-name: slide-in;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; /* Keeps the element in its final state after the animation ends */
+}
+
+@keyframes slide-in {
+  0% {
+    right: -100%; /* Start the element outside the screen */
+  }
+  100% {
+    right: 0%; /* End the element at its original position */
+  }
+}
