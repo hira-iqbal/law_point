@@ -5,6 +5,10 @@
   margin-top: -5px;
 }
 
+.nav-link-blue {
+ color: rgb(50, 92, 169);
+}
+
 .icon-height {
   height: 24px;
   margin-top:5px;
@@ -19,4 +23,120 @@
   background-image: image_url('law.png');
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.input-group:focus-within .form-control {
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.main-banner {
+  background-image: url(/assets/main-banner.png);
+  background-repeat: no-repeat;
+  background-position: 43% 100%;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 80px;
+  @media screen and (min-width:576px) {
+      background-size: 100% 100%;
+      margin-bottom: 124px;
+      background-position: center;
+  }
+}
+
+.banner-contnet {
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 150px;
+  margin-right: 50%;
+
+  .title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 42px;
+    color: rgb(240, 203, 143);
+    text-align: center;
+    margin-bottom: 16px;
+
+    @media  screen and (min-width:576px) {
+      font-size: 72px;
+      line-height: 62px;
+    }
+  }
+
+  .text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    max-width: 270px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: rgb(255, 250, 250);
+
+    @media  screen and (min-width:576px) {
+      font-size: 28px;
+      line-height: 34px;
+      max-width: 400px;
+    }
+  }
+
+  .btn-wrap {
+    display: flex;
+    flex-direction: column;
+    @media  screen and (min-width:576px) {
+      flex-direction: row;
+    }
+
+    button {
+      margin: 8px 0;
+      @media  screen and (min-width:576px) {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.marquee {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 70px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-color: rgba(22, 21, 21, 0.995);
+}
+
+.marquee a {
+  display: flex;
+  white-space: nowrap;
+  text-decoration: none;
+  color: rgba(247, 240, 240, 0.968);
+  animation: marquee 15s linear infinite;
+
+  &:hover {
+    text-decoration: underline;
+    span {
+      text-decoration: none;
+    }
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
