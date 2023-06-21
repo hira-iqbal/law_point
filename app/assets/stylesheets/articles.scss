@@ -1,133 +1,428 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.sub-container {
-  margin-top: -5px;
-}
-
-.nav-link-blue {
- color: rgb(50, 92, 169);
-}
-
-.icon-height {
-  height: 24px;
-  margin-top:5px;
-}
-
-.background-image {
-  margin-top: -5px;
-  width: 100%;
-}
-
-.login-background {
-  background-image: image_url('law.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.input-group:focus-within .form-control {
-  box-shadow: none;
-  border-color: transparent;
-}
-
-.main-banner {
-  background-image: url(/assets/main-banner.png);
-  background-repeat: no-repeat;
-  background-position: 43% 100%;
-  background-size: cover;
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  margin-bottom: 80px;
-  @media screen and (min-width:576px) {
-      background-size: 100% 100%;
-      margin-bottom: 124px;
-      background-position: center;
+.nsr-main-container {
+  .inner-container {
+    max-width: 1312px;
+    margin: 0 auto;
+    &.full-inner-container {
+        max-width: 1440px;
+    }
   }
+  .sub-container {
+    margin-top: -5px;
+  }
+
+  .banner-with-text {
+    margin: 0 0 124px;
+    &.banner-with-slider {
+        margin: 0 0 96px;
+        .b-right-section {
+            height: 555px !important;
+            .images-item-slider-container {
+                height: inherit;
+                .item-images-grid {
+                    height: inherit;
+                }
+            }
+        }
+    }
+    .banner-content {
+        display: flex;
+        grid-gap: 110px;
+        ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            grid-gap: 2px 12px;
+            margin: 0 0 24px;
+            margin-top: -17px;
+            li {
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 500;
+                font-family: inherit;
+                padding-left: 12px;
+                position: relative;
+                &:first-child {
+                    padding: 0;
+                    &:before {
+                        display: none;
+                    }
+                }
+                &:before {
+                    content: '|';
+                    position: absolute;
+                    left: 0;
+                }
+            }
+        }
+        p {
+            a {
+                font-size: 12px;
+                line-height: 20px;
+                text-decoration: underline;
+            }
+        }
+        .b-left-section {
+            width: 337px;
+            display: grid;
+            align-items: center;
+            &.w-345 { width: 345px; }
+            span {
+                font-family: inherit;
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 500;
+                margin: 0 0 12px;
+                display: block;
+            }
+            .section-content {
+                width: inherit;
+
+                span.btn {
+                    margin-top: 32px;
+                    text-align: left !important;
+                    a {
+                        display: inline-block;
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 20px;
+                        text-decoration: none;
+                        img {
+                          margin-left: 12px;
+                          vertical-align: middle;
+                        }
+                    }
+                }
+            }
+        }
+        .b-right-section {
+            img {
+                width: inherit;
+                height: inherit;
+            }
+        }
+    }
+    &.reverse-section {
+        .banner-content {
+            flex-direction: row-reverse;    
+        }
+    }
+    &.full-banner-with-text {
+        .b-right-section {
+            width: 928px;
+            height: 600px;
+        }
+    }
+    &.banner-with-text-style-2 {
+        .b-right-section {
+            width: 864px;
+            height: 600px;
+        }
+    }
+    &.banner-with-text-style-3 {
+        margin: 0 0 130px;
+        .banner-content {
+            grid-gap: 144px;
+        }
+        .b-left-section {
+            align-items: flex-start;
+            width: 528px;
+        }
+        .b-right-section {
+            width: 704px;
+            height: 600px;
+        }
+    }
+    &.banner-with-text-style-4 {
+        .banner-content {
+            justify-content: flex-end;
+        }
+        .b-left-section {
+
+        }
+        .b-right-section {
+            width: 760px;
+            height: 616px;
+            .item-img {
+                width: inherit;
+                height: inherit;
+            }
+        }
+    }
 }
 
-.banner-contnet {
-  max-width: 550px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 150px;
-  margin-right: 50%;
 
-  .title {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 40px;
-    line-height: 42px;
-    color: rgb(240, 203, 143);
-    text-align: center;
-    margin-bottom: 16px;
-
-    @media  screen and (min-width:576px) {
-      font-size: 72px;
-      line-height: 62px;
+  .polaroid {
+    width: 300px;
+    margin-left: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: left;
+    img{
+      height: 250px;
+      width: inherit;
+      object-fit: cover;
     }
   }
 
-  .text {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
-    max-width: 270px;
-    text-align: center;
-    margin-bottom: 40px;
-    color: rgb(255, 250, 250);
+  .grid-view {
+    margin: 0 0 124px;
+  }
+  
+  .container {
+    padding: 10px;
+  }
 
-    @media  screen and (min-width:576px) {
-      font-size: 28px;
-      line-height: 34px;
-      max-width: 400px;
+  .nav-link-blue {
+  color: rgb(50, 92, 169);
+  }
+
+  .icon-height {
+    height: 24px;
+    margin-top:5px;
+  }
+
+  .background-image {
+    margin-top: -5px;
+    width: 100%;
+  }
+
+  .login-background {
+    background-image: image_url('law.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .input-group:focus-within .form-control {
+    box-shadow: none;
+    border-color: transparent;
+  }
+
+  .main-banner {
+    background-image: url(/assets/main-banner.png);
+    background-repeat: no-repeat;
+    background-position: 43% 100%;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 80px;
+    @media screen and (min-width:576px) {
+        background-size: 100% 100%;
+        margin-bottom: 124px;
+        background-position: center;
     }
   }
 
-  .btn-wrap {
+  .banner-contnet {
+    max-width: 550px;
     display: flex;
     flex-direction: column;
-    @media  screen and (min-width:576px) {
-      flex-direction: row;
+    align-items: center;
+    margin-top: 150px;
+    margin-right: 50%;
+
+    .title {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 42px;
+      color: rgb(240, 203, 143);
+      text-align: center;
+      margin-bottom: 16px;
+
+      @media  screen and (min-width:576px) {
+        font-size: 72px;
+        line-height: 62px;
+      }
     }
 
-    button {
-      margin: 8px 0;
+    .text {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+      max-width: 270px;
+      text-align: center;
+      margin-bottom: 40px;
+      color: rgb(255, 250, 250);
+
       @media  screen and (min-width:576px) {
-        margin: 0;
+        font-size: 28px;
+        line-height: 34px;
+        max-width: 400px;
+      }
+    }
+
+    .btn-wrap {
+      display: flex;
+      flex-direction: column;
+      @media  screen and (min-width:576px) {
+        flex-direction: row;
+      }
+
+      button {
+        margin: 8px 0;
+        @media  screen and (min-width:576px) {
+          margin: 0;
+        }
       }
     }
   }
-}
 
-.marquee {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  overflow: hidden;
-  width: 100%;
-  height: 70px;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  background-color: rgba(22, 21, 21, 0.995);
-}
+  .marquee {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 70px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    background-color: rgba(22, 21, 21, 0.995);
+  }
 
-.marquee a {
-  display: flex;
-  white-space: nowrap;
-  text-decoration: none;
-  color: rgba(247, 240, 240, 0.968);
-  animation: marquee 15s linear infinite;
+  .marquee a {
+    display: flex;
+    white-space: nowrap;
+    text-decoration: none;
+    color: rgba(247, 240, 240, 0.968);
+    animation: marquee 15s linear infinite;
 
-  &:hover {
-    text-decoration: underline;
-    span {
-      text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+      span {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .max-lines {
+    display: block;/* or inline-block */
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 5em;
+    line-height: 1.8em;
+  }
+
+  footer {
+    position: relative;
+    background: #2C2C2C;
+    height: 410px;
+    padding: 72px 0 0;
+    .footer-content {
+        display: flex;
+        grid-gap: 219px;
+
+        h2 {
+            font-family: 'FranklinGothic-URW';
+            font-size: 64px;
+            line-height: 56px;
+            letter-spacing: -0.03em;
+            margin: 0 0 8px;
+            color: #fff;
+        }
+        p {
+            font-size: 20px;
+            line-height: 28px;
+            font-family: 'Freight-Text-Pro-Regular';
+            color: #fff;
+        }
+
+        .footer-left-content {
+            p {
+                margin: 0 0 47px;
+            }
+            .form {
+                width: 440px;
+                .single-field {
+                    position: relative;
+                    span.icon {
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        transform: translate(0, -50%);
+                        cursor: pointer;
+                    }
+                    input {
+                        font-size: 14px;
+                        line-height: 18px;
+                        // font-family: 'Franklin-Gothic-Light';
+                        font-family: 'Libre Franklin', sans-serif;
+                        width: 440px;
+                        font-weight: 400;
+                        border: none;
+                        outline: none;
+                        background-color: inherit;
+                        border-bottom: 1px solid #fff;
+                        padding-bottom: 4px;
+                        letter-spacing: 0.02em;
+                        color: #fff;
+                        &::placeholder {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-right-content {
+            display: flex;
+            grid-gap: 142px;
+            ul {
+                li {
+                    margin: 0 0 8px;
+                    &:last-child {
+                        margin: 0;
+                    }
+                    a {
+                        font-family: 'Libre Franklin', sans-serif;
+                        color: #fff;
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 24px;
+                        letter-spacing: 0.02em;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-bar {
+        height: 96px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        .footer-bar-content {
+            height: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            h2.logo {
+                width: 113.36px;
+                height: 32px;
+                a {
+                    width: 113.36px;
+                    height: 32px;
+                    background-image: url(/assets/logo.png);
+                }
+            }
+
+            ul {
+                display: flex;
+                grid-gap: 20px;
+                li {
+                    
+                }
+            }
+        }
     }
   }
 }

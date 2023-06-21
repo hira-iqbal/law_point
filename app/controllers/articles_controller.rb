@@ -3,7 +3,10 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
   def index
-    @pagy, @articles = pagy(Article.ordered, items: 10)
+    @articles = Article.all
+    @article_type = ArticleType.find_by(id: params[:article_type_id])
+    @articles = @article.where(article_type_id: @article_type_id) if @article_type_id.present?
+    @pagy, @articles = pagy(@articles.ordered, items: 10)
   end
 
   def show; end
@@ -43,6 +46,6 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:title, :body)
+    params.require(:article).permit(:title, :body, :location_type_id)
   end
 end
