@@ -3,9 +3,12 @@ Rails.application.routes.draw do
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-  root "articles#index"
+  root "pages#home"
   resources :users
-  resources :articles
+  resources :articles, except:[:index]
+  get '/articles', to: 'articles#index'
+  get '/articles/:id', to: 'articles#index'
+  resources :home
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   # You can have the root of your site routed with "root"

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+  </head>
+
+  <body>
+    <section>
+      <div class="main-banner">
+        <div class="banner-contnet">
+          <h1 class="title">SIMPLIFYING LEGAL COMPLEXITIES</h1>
+          <p class="text">Expert legal guidance along your path to justice</p>
+        </div>
+
+        <div class="marquee">
+          <div class="d-flex"></span><a href="#" class="marque-list-link">Expert legal guidance along your path to justice</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="full-banner-with-text banner-with-text">
+      <div class="inner-container banner-content">
+          <div class="b-left-section w-345">
+              <div class="section-content">
+                  <h2 class="w-385">Featured Article</h2>
+
+                  <p class="fs-20">
+                      <%= @article.body %>
+                  </p>
+
+                  <span class="btn">
+                      <%= link_to article_path(@article.id) do %>
+                          View Article
+
+                          <%= image_tag "arrow-black.png" %>
+                      <% end %>
+                  </span>
+              </div>
+          </div>
+
+          <div class="b-right-section ">
+            <%= image_tag "card_image.jpeg" %>
+          </div>
+      </div>
+    </div>
+  </body
+<html>
