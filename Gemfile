@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.7.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '>= 5.1.2.rc1', '< 5.3'
+gem 'rails', '~> 6.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
@@ -30,6 +30,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'unicorn'
 gem 'devise', '4.8.0'
 gem 'dotenv-rails'
+gem 'listen', '~> 3.1.5'
+gem 'webpacker', '~> 3.0'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
