@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   devise_for :users, path: '', path_names: { sign_in: 'admin', sign_up: 'sign_up' }
 
   # The priority is based upon order of creation: first created -> highest priority.

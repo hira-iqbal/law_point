@@ -10,4 +10,6 @@ class Article < ApplicationRecord
   validates :body, presence: true, length: { minimum: 200 }
 
   scope :ordered, -> { order(updated_at: :desc) }
+
+  has_rich_text :content
 end

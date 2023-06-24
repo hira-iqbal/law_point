@@ -21,7 +21,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
     @article.user_id = current_user.id
     if @article.save!
-     redirect_to @article, notice: "article is saved"
+     redirect_to @article, notice: "article has been successfully created."
      else
       render :new, alert: @article.errors.full_messages
     end
@@ -29,7 +29,7 @@ class ArticlesController < ApplicationController
 
   def update
     if @article.update(article_params)
-      redirect_to @article
+      redirect_to @article, notice: "Article has been successfully created."
     else
       render :edit, alert: @article.errors.full_messages
     end
@@ -37,7 +37,7 @@ class ArticlesController < ApplicationController
 
   def destroy
     @article.destroy
-    redirect_to articles_path
+    redirect_to articles_path, notice: "Article has been successfully deleted."
   end
 
   private
@@ -46,6 +46,6 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:title, :body, :location_type_id)
+    params.require(:article).permit(:title, :body, :content, :article_type)
   end
 end
